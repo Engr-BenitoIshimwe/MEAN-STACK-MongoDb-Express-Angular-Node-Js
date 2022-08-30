@@ -27,7 +27,7 @@ export class ListStudentComponent implements OnInit {
   delStudent(datas:any) {
     this.studentservice.deleteStudent(datas._id).subscribe(data=> {
       // console.log(data);
-      this.students = this.students.filter((u:any) => u! == datas); 
+      this.students = this.students.filter((u:any) => u !== datas); 
     })
   }
 
